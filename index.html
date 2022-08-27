@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask for rent</title>
+    <link rel="icon" href="images/iconmonstr-party-19-240.png" />
+    <!-- -----bootstrap css------ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- ----------bootstrap js------------- -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ----------bootstrap icon-------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- ----------customcss-------------->
+    <link rel="stylesheet" href="style.css" />
+    <!-- --------------swiper css -->
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!-- ----------header-------------- -->
+    <header>
+      <!-- As a heading -->
+      <nav class="navbar">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">
+            <a href="#" class="logo">AskforRent</a>
+            <div class="dropdown d-inline-block">
+              <a
+                class="dropdown"
+                id="city"
+                onclick="showlink()"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Gwalior </a
+              ><i class="bi bi-chevron-down"></i>
+              <div id="dropdown-links">
+                <ul class="container">
+                  <a
+                    href="javascript:void(0)"
+                    id="close"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                  >
+                  <li><a href="#" onclick="changecity(event)">Gwalior </a></li>
+                  <li><a href="#" onclick="changecity(event)">Benglore</a></li>
+                  <li><a href="#" onclick="changecity(event)">Gurgaon</a></li>
+                  <li>
+                    <a href="#" onclick="changecity(event)">Hyderabaad</a>
+                  </li>
+                  <li><a href="#" onclick="changecity(event)">Delhi</a></li>
+                  <li><a href="#" onclick="changecity(event)">Indore</a></li>
+                  <li><a href="#" onclick="changecity(event)">Jaipur</a></li>
+                  <li>
+                    <a href="#" onclick="changecity(event)">Greater Noida</a>
+                  </li>
+                  <li><a href="#" onclick="changecity(event)">Chennai</a></li>
+                  <li><a href="#" onclick="changecity(event)">Kota</a></li>
+                  <li>
+                    <a href="#" onclick="changecity(event)">Ahemdabaad</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="changecity(event)">Hyderabaad</a>
+                  </li>
+                  <li><a href="#" onclick="changecity(event)">Delhi</a></li>
+                  <li><a href="#" onclick="changecity(event)">Indore</a></li>
+                  <li><a href="#" onclick="changecity(event)">Jaipur</a></li>
+                  <li>
+                    <a href="#" onclick="changecity(event)">Greater Noida</a>
+                  </li>
+                  <li><a href="#" onclick="changecity(event)">Chennai</a></li>
+                  <li><a href="#" onclick="changecity(event)">Kota</a></li>
+                  <li>
+                    <a href="#" onclick="changecity(event)">Ahemdabaad</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="changecity(event)">Hyderabaad</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </span>
+          <div class="links">
+            <ul class="d-none d-md-flex">
+              <li><a href="#" class="list-prop">List your property</a></li>
+              <li><a href="login.html" class="color">Login</a></li>
+              <li><a href="signup.html" class="color">Signup</a></li>
+            </ul>
+            <span id="menu" onclick="openNav()"
+              ><i class="bi bi-list"></i
+              ><dfn class="d-none d-md-inline-flex">Menu</dfn></span
+            >
+          </div>
+        </div>
+        <!-- --------------sidebar -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="slider-logo">
+            <h2><span>A</span>sk for Rent</h2>
+          </div>
+          <hr />
+          <a href="#" class="slider-links">Explore</a>
+          <a href="#" class="slider-links">About Us</a>
+          <a href="#" class="slider-links">Contact Us</a>
+          <a href="#" class="slider-links">Enquire Now</a>
+          <a href="#" class="slider-links">FAQs</a>
+          <a href="#" class="slider-links">Terms & Condition</a>
+          <a href="#" class="slider-links">Privacy Policy</a>
+          <hr />
+          <a href="signup.html" class="slider-links sl-btn">Create Account</a>
+          <a href="login.html" class="slider-links sl-btn" id="sl-btn">Login</a>
+        </div>
+        <div id="transition"></div>
+      </nav>
+    </header>
+    <!-- ----------banner-------------- -->
+    <section id="banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 search">
+            <h1>Renting made easy</h1>
+            <h5>Easiest way to find & rent your home online.</h5>
+            <div class="search-box">
+              <input
+                type="search"
+                placeholder="Enter city or location "
+              /><button class="s-btn"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+          <div class="col-md-5 p-3">
+            <img src="images/banner.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="design-every" class="d-none d-sm-block">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <div class="col-md-2 mx-4">
+            <h2>Designed for everyone</h2>
+          </div>
+          <div class="col-md-3 design-box">
+            <div class="box">
+              <img
+                src="images/Family _Monochromatic.png"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <h5>Home for family</h5>
+            <p>Rent a beautiful house for your family.</p>
+            <button class="c-btn">Explore</button>
+          </div>
+          <div class="col-md-3 design-box">
+            <div class="box">
+              <img
+                src="images/undraw_fans_re_cri3.svg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <h5>Home for friends</h5>
+            <p>Rent a bachelor friendly house with your friends.</p>
+            <button class="c-btn">Explore</button>
+          </div>
+          <div class="col-md-3 design-box">
+            <div class="box">
+              <img
+                src="images/undraw_feeling_proud_qne1.svg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <h5>Home for you</h5>
+            <p>Rent a shared room or a private room for yourself.</p>
+            <button class="c-btn">Explore</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="localities">
+      <div class="container">
+        <h2 class="title-heading">
+          Popular localities in <br /><span id="locality" >Gwalior</span>
+        </h2>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide card">
+              <h4>City center</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>Lashkar</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>Morar</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>Thatipur</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>D.D Nagar</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>Kila Gate</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>Hajira</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>Alkapuri</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+            <div class="swiper-slide card">
+              <h4>Govindpuri</h4>
+              <h3>10+</h3>
+              <p>
+                Properties <br />
+                for rent
+              </p>
+              <button class="cv-btn">Explore</button>
+            </div>
+          </div>
+          <div class="swiper-button-next slider-hover d-none d-lg-block"></div>
+          <div class="swiper-button-prev slider-hover d-none d-lg-block"></div>
+          <div class="swiper-pagination slider-hover"></div>
+        </div>
+      </div>
+    </section>
+    <section id="list">
+      <div class="container text-center">
+        <h3 class="title-heading">Are you a Property Owner ?</h3>
+        <h4>Rent your property effortlesly</h4>
+        <p>Earn money by renting your property</p>
+        <button class="list-prop">List your property</button>
+      </div>
+    </section>
+    <section id="benifit">
+      <div class="container text-center">
+        <h2 class="title-heading">Benifit of renting with us</h2>
+        <div class="benifit-box">
+          <div class="col-md-2">
+            <i class="bi bi-currency-rupee"></i>
+            <h4>
+              No Brokage <br />
+              Charge
+            </h4>
+          </div>
+          <div class="col-md-2">
+            <i class="bi bi-card-checklist"></i>
+            <h4>
+              Shortlist without <br />
+              visit
+            </h4>
+          </div>
+          <div class="col-md-2">
+            <i class="bi bi-infinity"></i>
+            <h4>
+              Free unlimited <br />
+              listing
+            </h4>
+          </div>
+          <div class="col-md-2">
+            <i class="bi bi-bag-heart"></i>
+            <h4>
+              Affordable <br />
+              rents
+            </h4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="difference">
+      <div class="container-fluid text-center">
+        <h2 class="title-heading">We make a difference</h2>
+        <div class="difference-box">
+          <div class="col-md-4">
+            <h2>3000+</h2>
+            <h5>Happy Customers</h5>
+          </div>
+          <div class="col-md-4">
+            <h2>500+</h2>
+            <h5>Propeties for rent</h5>
+          </div>
+          <div class="col-md-4">
+            <h2>10+</h2>
+            <h5>Cities in India</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="enquire">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 enquire-detail">
+            <h2>Get in touch with us to rent or book your property</h2>
+            <button class="cv-btn">Enquire now</button>
+          </div>
+          <div class="col-md-6">
+            <img src="images/contact.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <!-- <img src="images/wave2.svg" class="img-fluid" alt=""> -->
+      <div class="container-fluid text-center">
+        <h4>Connect with us on</h4>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-whatsapp"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+      <p class="copyright">
+        &copy; 2023 | ask4rent.com | All rights reserved | Desinged with
+        <i class="bi bi-heart"></i> by Mohit Praja
+      </p>
+    </footer>
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "280px";
+        document.getElementById("transition").style.display = "block";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("transition").style.display = "none";
+        document.getElementById("dropdown-links").style.display = "none";
+      }
+      function showlink() {
+        if (
+          document.getElementById("dropdown-links").style.display == "block"
+        ) {
+          document.getElementById("dropdown-links").style.display = "none";
+        } else {
+          document.getElementById("dropdown-links").style.display = "block";
+        }
+      }
+    </script>
+  </body>
+  <!-- --------------swiper js -->
+  <script src="swiper-bundle.min.js"></script>
+  <script>
+    // ---------swiper script
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 4,
+      spaceBetween: 10,
+      slidesPerGroup: 2,
+      // loop: true,
+      autoplay: true,
+      // loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    // ----------city dropdown-------------
+    function change_city_data(current_city){
+      let city_data=[
+      [
+      {city_name:'City center',properties:20},
+      {city_name:'Lashkar',properties:20},
+      {city_name:'Morar',properties:20},
+      {city_name:'Thatipur',properties:20},
+      {city_name:'D.D. Nagar',properties:20},
+      {city_name:'Kila Gate',properties:20},
+      {city_name:'Hajira',properties:20},
+      {city_name:'Alkapuri',properties:20},
+      {city_name:'Govindpuri',properties:20},
+     ],
+     [
+      {city_name:'Basavanagudi',properties:20},
+      {city_name:'Jayanagar',properties:20},
+      {city_name:'Koramangala',properties:20},
+      {city_name:'Malleshwaram',properties:20},
+      {city_name:'Rajaji Nagar',properties:20},
+      {city_name:'Frazer town',properties:20},
+      {city_name:'Sadashiva Nagar',properties:20},
+      {city_name:'Bellandur',properties:20},
+      {city_name:'Benson Tower',properties:20},
+     ],
+     [
+      {city_name:'Sohna City',properties:20},
+      {city_name:'Palam Vihar',properties:20},
+      {city_name:'MG Road',properties:20},
+      {city_name:'Sushant Lok',properties:20},
+      {city_name:'Nirvana Country',properties:20},
+      {city_name:'Sector 43',properties:20},
+      {city_name:'DLF city',properties:20},
+      {city_name:'Mehrauli',properties:20},
+      {city_name:'Basai Road',properties:20},
+     ],
+     [
+      {city_name:'Sohna City',properties:20},
+      {city_name:'Palam Vihar',properties:20},
+      {city_name:'MG Road',properties:20},
+      {city_name:'Sushant Lok',properties:20},
+      {city_name:'Nirvana Country',properties:20},
+      {city_name:'Sector 43',properties:20},
+      {city_name:'DLF city',properties:20},
+      {city_name:'Mehrauli',properties:20},
+      {city_name:'Basai Road',properties:20},
+     ],
+     
+     
+
+    ]
+    ////objected
+    let arr_curr=['Gwalior','Benglore','Gurgaon'];
+    let position=0;
+    for(let i=0;i<arr_curr.length;i++){
+      if(current_city==arr_curr[i]){
+        position=i;
+      }
+    }
+    let city_name=document.querySelectorAll('.card h4');
+    for(let i=0;i<city_name.length;i++){
+      city_name[i].textContent=city_data[position][i].city_name;
+    }
+
+      
+
+    }
+    function changecity(event) {
+      let city = document.getElementById("city");
+      let locality = document.getElementById("locality");
+      city.textContent = event.target.textContent;
+      locality.textContent = event.target.textContent;
+      document.getElementById("dropdown-links").style.display = "none";
+      change_city_data(city.textContent);
+
+    }
+
+  </script>
+  <script>
+   
+ 
+    
+
+  </script>
+  <!-- this is leniasdfkl;adjfaskl;fjsak;ldfj -->
+</html>

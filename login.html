@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Ask4rent</title>
+    <link rel="icon" href="images/iconmonstr-party-19-240.png" />
+
+    <!-- -----bootstrap css------ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- ----------bootstrap js------------- -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ----------bootstrap icon-------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- ----------customcss-------------->
+    <link rel="stylesheet" href="style.css" />
+    <!-- --------------swiper css -->
+    <link rel="stylesheet" href="swiper-bundle.min.css" />
+    <style>
+      .container {
+        padding: 0px 10px;
+        display: grid;
+        align-items: center;
+        height: 100vh;
+      }
+      .container .img-box {
+        display: flex;
+        align-content: center;
+        height: 100%;
+      }
+      .container img {
+        transform: scaleX(-1);
+      }
+      .login-detail {
+        padding: 50px 20px;
+      }
+      .login-detail form {
+        display: flex;
+        flex-direction: column;
+      }
+      .login-detail h2 {
+        font-family: var(--pacifico);
+        text-align: center;
+      }
+      .login-detail h5 {
+        text-transform: uppercase;
+        text-align: left;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 5px 0;
+      }
+      .input {
+        padding: 5px 10px;
+        margin: 5px 0;
+        outline: none;
+      }
+      .input:focus {
+        border: 0;
+        border-bottom: 2px solid var(--primary);
+        border-radius: 0;
+        background-color: whitesmoke;
+      }
+      .login-detail form a {
+        text-align: left;
+        text-decoration: none;
+        color: black;
+        padding: 5px 0;
+        font-weight: 500;
+      }
+      .login-detail form a b {
+        font-weight: 500;
+        color: #2a7ad4;
+        padding: 0 2px;
+      }
+      .c-btn {
+        padding: 6px 0px;
+        background-color: var(--primary);
+        border: none;
+        outline: none;
+        font-weight: 600;
+        border-radius: 5px;
+        color: white;
+        margin: 5px 0;
+      }
+      .c-btn:hover {
+        outline: 2px solid var(--primary);
+        background-color: transparent;
+        color: black;
+      }
+      form .facebook {
+        background-color: #4267b2;
+      }
+      form .facebook:hover {
+        outline: 2px solid #4267b2;
+        background-color: transparent;
+        color: black;
+      }
+      form .google {
+        background-color: #ea4335;
+      }
+      form .google:hover {
+        outline: 2px solid #ea4335;
+        background-color: transparent;
+        color: black;
+      }
+      form span {
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 5px 0;
+        font-size: 15px;
+      }
+      form label {
+        text-align: left;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 10px 0;
+      }
+      .login-detail p {
+        text-align: left;
+        padding: 10px 0;
+        font-weight: 500;
+        color: gray;
+      }
+      .login-detail span {
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .login-detail span a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 d-none d-md-block">
+          <div class="img-box">
+            <img src="images/login.svg" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="login-detail text-center">
+            <h2 class="title-heading">AskforRent</h2>
+            <h5>Log in to your account</h5>
+            <form action="">
+              <input
+                type="text"
+                class="input"
+                placeholder="Enter Email or Phone Number"
+              />
+              <input
+                type="password"
+                class="input"
+                placeholder="Enter Password"
+                id="myInput"
+              />
+              <a href="#">Forgot your password ?<b>click here</b></a>
+              <label>
+                <input type="checkbox" onclick="show_pass()" />
+                Show password
+              </label>
+              <input type="submit" class="c-btn" value="Login" />
+              <span>or</span>
+              <button class="c-btn facebook">
+                <i class="bi bi-facebook"></i> &nbsp;Continue with facebook
+              </button>
+              <button class="c-btn google">
+                <i class="bi bi-google"></i> &nbsp;Continue with google
+              </button>
+            </form>
+            <p>
+              By continuing, you agree to Ask4rent's
+              <b>Terms of service, Privacy policy</b> and cookie use.
+            </p>
+            <hr />
+            <span
+              >Not on AskforRent yet ? <a href="signup.html">Sign up</a></span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    function show_pass() {
+      var x = document.getElementById("myInput");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    }
+  </script>
+</html>

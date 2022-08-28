@@ -116,7 +116,7 @@
             <h2><span>A</span>sk for Rent</h2>
           </div>
           <hr />
-          <a href="#" class="slider-links">Explore</a>
+          <a href="#localities" onclick="closeNav()"  class="slider-links">Explore</a>
           <a href="#" class="slider-links">About Us</a>
           <a href="#" class="slider-links">Contact Us</a>
           <a href="#" class="slider-links">Enquire Now</a>
@@ -140,7 +140,7 @@
             <div class="search-box">
               <input
                 type="search"
-                placeholder="Enter city or location "
+                placeholder="Enter city or location " onclick="show_search()"
               /><button class="s-btn"><i class="bi bi-search"></i></button>
             </div>
           </div>
@@ -149,7 +149,61 @@
           </div>
         </div>
       </div>
+      <div  id="search">
+          <div class="container">
+           <span> <a
+            href="javascript:void(0)"
+            id="close"
+            class="closebtn"
+            onclick="closeNav()"
+            >&times;</a
+          ></span>
+          <h5>Where in <div class="dropdown d-inline border p-2 m-1">
+            <a  href="#" role="button" data-bs-toggle="dropdown" id="search-2">
+              Gwalior
+            </a> <i class="bi bi-chevron-down"></i>
+          
+            <ul class="dropdown-menu">
+              <li onclick="changecity(event)"><a href="#" >Gwalior </a></li>
+              <li onclick="changecity(event)"><a href="#" >Benglore</a></li>
+              <li onclick="changecity(event)"><a href="#" >Gurgaon</a></li>
+              <li onclick="changecity(event)">
+                <a href="#" >Hyderabaad</a>
+              </li>
+              <li onclick="changecity(event)"><a href="#" >Delhi</a></li>
+              <li onclick="changecity(event)"><a href="#" >Indore</a></li>
+              <li onclick="changecity(event)"><a href="#" >Jaipur</a></li>
+              <li onclick="changecity(event)"><a href="#" >Greater Noida</a></li>
+              <li onclick="changecity(event)"><a href="#" >Chennai</a></li>
+              <li onclick="changecity(event)"><a href="#" >Kota</a></li>
+              <li onclick="changecity(event)"><a href="#" >Ahemdabaad</a></li>
+              <li onclick="changecity(event)"><a href="#" >Gwalior </a></li>
+              <li onclick="changecity(event)"><a href="#" >Benglore</a></li>
+              <li onclick="changecity(event)"><a href="#" >Gurgaon</a></li>
+              <li onclick="changecity(event)">
+                <a href="#" >Hyderabaad</a>
+              </li>
+            </ul>
+          </div>
+          do you want to live ?
+          </h5>
+          <input type="search" placeholder="Enter location" class="d-block" autofocus>
+          <h6>Popular localities</h6>
+          <ul class="search-city">
+              <li><a href="">City center</a></li>
+              <li><a href="">Laskar</a></li>
+              <li><a href="">Morar</a></li>
+              <li><a href="">Thatipur</a></li>
+              <li><a href="">D.D Nagar</a></li>
+              <li><a href="">Kilagate</a></li>
+              <li><a href="">Hajira</a></li>
+              <li><a href="">Alkapuri</a></li>
+              <li><a href="">Govindpuri</a></li>
+          </ul>
+          </div>
+      </div>
     </section>
+    <!-- ----------design-every-------------- -->
     <section id="design-every" class="d-none d-sm-block">
       <div class="container-fluid">
         <div class="row text-center">
@@ -195,6 +249,7 @@
         </div>
       </div>
     </section>
+    <!-- ----------localities-------------- -->
     <section id="localities">
       <div class="container">
         <h2 class="title-heading">
@@ -290,6 +345,7 @@
         </div>
       </div>
     </section>
+    <!-- ----------list-------------- -->
     <section id="list">
       <div class="container text-center">
         <h3 class="title-heading">Are you a Property Owner ?</h3>
@@ -298,6 +354,7 @@
         <button class="list-prop">List your property</button>
       </div>
     </section>
+    <!-- ----------benifit-------------- -->
     <section id="benifit">
       <div class="container text-center">
         <h2 class="title-heading">Benifit of renting with us</h2>
@@ -333,6 +390,7 @@
         </div>
       </div>
     </section>
+    <!-- ----------difference-------------- -->
     <section id="difference">
       <div class="container-fluid text-center">
         <h2 class="title-heading">We make a difference</h2>
@@ -352,6 +410,7 @@
         </div>
       </div>
     </section>
+    <!-- ----------enquire-------------- -->
     <section id="enquire">
       <div class="container">
         <div class="row">
@@ -365,6 +424,7 @@
         </div>
       </div>
     </section>
+    <!-- ----------footer-------------- -->
     <footer>
       <!-- <img src="images/wave2.svg" class="img-fluid" alt=""> -->
       <div class="container-fluid text-center">
@@ -382,132 +442,11 @@
         <i class="bi bi-heart"></i> by Mohit Praja
       </p>
     </footer>
-
-    <script>
-      function openNav() {
-        document.getElementById("mySidenav").style.width = "280px";
-        document.getElementById("transition").style.display = "block";
-      }
-
-      function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("transition").style.display = "none";
-        document.getElementById("dropdown-links").style.display = "none";
-      }
-      function showlink() {
-        if (
-          document.getElementById("dropdown-links").style.display == "block"
-        ) {
-          document.getElementById("dropdown-links").style.display = "none";
-        } else {
-          document.getElementById("dropdown-links").style.display = "block";
-        }
-      }
-    </script>
   </body>
+  <!-- ------------mainjs -->
+  <script src="allindex.js" defer></script>
+  <!-- ---------------scrollanimation -->
+  <script src="scrollreveal.min.js"></script>
   <!-- --------------swiper js -->
   <script src="swiper-bundle.min.js"></script>
-  <script>
-    // ---------swiper script
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 4,
-      spaceBetween: 10,
-      slidesPerGroup: 2,
-      // loop: true,
-      autoplay: true,
-      // loopFillGroupWithBlank: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-    // ----------city dropdown-------------
-    function change_city_data(current_city){
-      let city_data=[
-      [
-      {city_name:'City center',properties:20},
-      {city_name:'Lashkar',properties:20},
-      {city_name:'Morar',properties:20},
-      {city_name:'Thatipur',properties:20},
-      {city_name:'D.D. Nagar',properties:20},
-      {city_name:'Kila Gate',properties:20},
-      {city_name:'Hajira',properties:20},
-      {city_name:'Alkapuri',properties:20},
-      {city_name:'Govindpuri',properties:20},
-     ],
-     [
-      {city_name:'Basavanagudi',properties:20},
-      {city_name:'Jayanagar',properties:20},
-      {city_name:'Koramangala',properties:20},
-      {city_name:'Malleshwaram',properties:20},
-      {city_name:'Rajaji Nagar',properties:20},
-      {city_name:'Frazer town',properties:20},
-      {city_name:'Sadashiva Nagar',properties:20},
-      {city_name:'Bellandur',properties:20},
-      {city_name:'Benson Tower',properties:20},
-     ],
-     [
-      {city_name:'Sohna City',properties:20},
-      {city_name:'Palam Vihar',properties:20},
-      {city_name:'MG Road',properties:20},
-      {city_name:'Sushant Lok',properties:20},
-      {city_name:'Nirvana Country',properties:20},
-      {city_name:'Sector 43',properties:20},
-      {city_name:'DLF city',properties:20},
-      {city_name:'Mehrauli',properties:20},
-      {city_name:'Basai Road',properties:20},
-     ],
-     [
-      {city_name:'Sohna City',properties:20},
-      {city_name:'Palam Vihar',properties:20},
-      {city_name:'MG Road',properties:20},
-      {city_name:'Sushant Lok',properties:20},
-      {city_name:'Nirvana Country',properties:20},
-      {city_name:'Sector 43',properties:20},
-      {city_name:'DLF city',properties:20},
-      {city_name:'Mehrauli',properties:20},
-      {city_name:'Basai Road',properties:20},
-     ],
-     
-     
-
-    ]
-    ////objected
-    let arr_curr=['Gwalior','Benglore','Gurgaon'];
-    let position=0;
-    for(let i=0;i<arr_curr.length;i++){
-      if(current_city==arr_curr[i]){
-        position=i;
-      }
-    }
-    let city_name=document.querySelectorAll('.card h4');
-    for(let i=0;i<city_name.length;i++){
-      city_name[i].textContent=city_data[position][i].city_name;
-    }
-
-      
-
-    }
-    function changecity(event) {
-      let city = document.getElementById("city");
-      let locality = document.getElementById("locality");
-      city.textContent = event.target.textContent;
-      locality.textContent = event.target.textContent;
-      document.getElementById("dropdown-links").style.display = "none";
-      change_city_data(city.textContent);
-
-    }
-
-  </script>
-  <script>
-   
- 
-    
-
-  </script>
-  <!-- this is leniasdfkl;adjfaskl;fjsak;ldfj -->
 </html>

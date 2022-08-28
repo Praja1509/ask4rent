@@ -18,6 +18,17 @@
     margin: 0;
     padding: 0;
 }
+a{
+    text-decoration: none;
+    color: black ;
+
+}
+a:hover{
+    color: black;
+}
+ul{
+    list-style-type: none;
+}
 /* -------------header---------- */
 nav .container-fluid{
     padding: 10px 30px;
@@ -29,14 +40,12 @@ nav .container-fluid{
     background-color: white;
 }
 nav .logo{
-    text-decoration: none;
     font-family: var(--pacifico);
     color: black;
     font-size: 25px;
     margin: 0 6px;
 }
 nav .dropdown{
-    text-decoration: none;
     color: black;
     font-size: 18px;
     
@@ -46,15 +55,12 @@ nav .dropdown{
 }
 .links ul{
     display: flex;
-    list-style-type: none;
     margin: 0 5px;
 }
 .links ul li{
     padding: 2px 8px;
 }
-.links ul li a{
-    text-decoration: none;
-}
+
 .list-prop{
     padding: 5px 20px;
     font-weight: 500;
@@ -104,7 +110,6 @@ nav #menu dfn{
   }
   
   .sidenav a {
-    text-decoration: none;
     font-size:18px;
     display: block;
     color: black;
@@ -207,7 +212,6 @@ outline: 1px solid black;
 }
 #dropdown-links ul{
     padding: 20px 15px;
-    list-style-type: none;
      display: flex;
     flex-wrap: wrap;
 }
@@ -220,7 +224,6 @@ outline: 1px solid black;
 
 }
 #dropdown-links li a{
-    text-decoration: none;
     color: black;
 
 }
@@ -232,7 +235,6 @@ outline: 1px solid black;
     position: absolute;
     right: 20px;
     margin-top: -25px;
-    text-decoration: none;
     color: black;
     font-size: 40px;
 }
@@ -279,6 +281,7 @@ outline: 1px solid black;
     border-radius: 30px;
 
 }
+
 .search input[type=search]::-webkit-search-cancel-button{
     position: relative;
     left: -25px;
@@ -295,7 +298,84 @@ outline: 1px solid black;
     position:relative;
     left: -40px;
 }
+/* ---------------searching of city---------- */
+#search{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:white;
+    z-index: 13;
+    border-bottom: 5px solid var(--primary);
+    display: none;
+}
+#search .container{
+    padding:40px 30px;
+}
+#search-2{
+    display: inline-block;
+    width: 150px;
+    min-width:80px;
+    padding: 2px 5px;
+    color: black;
+    margin: 10px 0;
+}
 
+#search-2 i{
+    float: right;
+}
+#search h5 ul{
+    width: 180px;
+    min-width: 150px;
+    height: 400px;
+    overflow: auto;
+    overflow-x: hidden;
+    border-radius: 0;
+}
+#search h5 ul::-webkit-scrollbar{
+   width:.3rem;
+   background-color:gainsboro;
+}
+#search h5 ul::-webkit-scrollbar-thumb{
+   width:.3rem;
+   background-color:gray;
+   height: 2px;
+}
+#search h5 ul li{
+    padding: 8px 10px;
+
+}
+#search h5 ul li:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+#search h5 ul li a:hover{
+    color: #000;
+}
+#search span{
+   position: relative;
+   top: -20px;
+   float: right;
+   font-weight:200;
+
+}
+#search input{
+    width: 80%;
+    margin: 15px 0 20px;
+    padding: 8px 15px;
+    outline: none;
+}
+
+.search-city li{
+    display: inline-block;
+    padding: 8px 10px;
+    margin: 3px 5px;
+    border: 1.5px solid black;
+    border-radius: 20px;
+}
+.search-city li:hover{
+    border-color: var(--primary);
+}
 /* ----------------designedforeveryone---------------- */
 #design-every{
     background-color: var(--primary);
@@ -357,8 +437,9 @@ outline: 1px solid black;
 }
 .swiper .card{
   width: 100%;
-  max-width: 250px;
-  min-width: 180px;
+  /* max-width: 200px; */
+  max-width: 215px;
+  /* min-width: 10px; */
   margin: 0 10px;
   text-align: center;
   padding:10px 15px;
@@ -577,7 +658,7 @@ footer .social-links a:hover{
 }
 @media screen and (max-width:350px) {
     .search input[type=search]{
-        width: 220px;
+        width:220px;
     }
     .search h5{
         font-size: 15px;
@@ -588,7 +669,23 @@ footer .social-links a:hover{
     .difference-box h5{
         font-size:18px;
     }
+    #localities .card{
+        max-width: 180px;
+        min-height: 120px;
+    }
+    body{
+        overflow-x: hidden;
+    }
    
 }
+@media screen and (min-width:767px) and (max-width:991px){
+    .s-btn{
+        position: relative;
+        float: right;
+        top: -45px;
+        left: -15px;
+    }
+}
+
 
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ask for rent</title>
+    <title>Home | Ask for rent</title>
     <link rel="icon" href="images/iconmonstr-party-19-240.png" />
     <!-- -----bootstrap css------ -->
     <link
@@ -27,6 +27,8 @@
     />
     <!-- ----------customcss-------------->
     <link rel="stylesheet" href="style.css" />
+    <!-- ----------userlogedincss-------------- -->
+    <link rel="stylesheet" href="logedin.css" />
     <!-- --------------swiper css -->
     <link rel="stylesheet" href="swiper-bundle.min.css" />
   </head>
@@ -97,14 +99,57 @@
           </span>
           <div class="links">
             <ul class="d-none d-md-flex">
-              <li><a href="listprop.html" class="list-prop">List your property</a></li>
-              <li><a href="login.html" class="color">Login</a></li>
-              <li><a href="signup.html" class="color">Signup</a></li>
+              <li><a href="#" class="list-prop">List your property</a></li>
+             <i class="bi bi-bell-fill" count="1" onclick="show_notification()"></i>
             </ul>
+            <span id="user-img-box" onclick="show_profile_link()" class="d-none d-md-flex">
+                <img src="images/profile-circle.png"  alt="">
+             </span>
             <span id="menu" onclick="openNav()"
               ><i class="bi bi-list"></i
-              ><dfn class="d-none d-md-inline-flex">Menu</dfn></span
+              ><dfn class="d-none d-md-inline-flex"></dfn></span
             >
+          </div>
+          <div id="profile-links">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">View Porfile</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Logut</a></li>
+                </ul>
+          </div>
+          <div id="notification">
+            <ul>
+                <li>
+                    <p>Complete your profile. <br>
+                        <a href="#">click here to complete profile</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam aliquam fugiat consequatur iusto quae nostrum quisquam ratione quos possimus!
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+            </ul>
           </div>
         </div>
         <!-- --------------sidebar -->
@@ -115,7 +160,13 @@
           <div class="slider-logo">
             <h2><span>A</span>sk for Rent</h2>
           </div>
-          <hr />
+          <div class="profile">
+            <span class="profile-box">
+                <img src="images/profile-circle.png" class="img-fluid" alt="">
+            </span>
+            <h4>Jon Doe</h4>
+            <p><a href="#">view profile</a></p>
+          </div>
           <a href="#localities" onclick="closeNav()"  class="slider-links">Explore</a>
           <a href="#" class="slider-links">About Us</a>
           <a href="contact.html" class="slider-links">Contact Us</a>

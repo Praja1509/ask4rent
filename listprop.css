@@ -1,0 +1,68 @@
+/* -------------------header----------- */
+.title-heading::before{
+    margin-left: 10px;
+    margin-top:-8px;
+}
+header .container{
+    padding: 40px 10px;
+    font-family: var(--pacifico);
+}
+/* ----------------banner---------- */
+#banner{
+    background-color:var(--primary);
+    color: white;
+}
+#banner .container h2{
+    font-family: var(--ubuntu);
+    font-weight: 600;
+    padding: 5px 0;
+}
+#banner .container p{
+    font-family: var(--comforta);
+    font-weight: 550;
+    font-size: 15px;
+}
+#banner .container button{
+    background-color: white;
+    color: black;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+#banner .container button:hover{
+    background-color: black;
+    color: var(--primary);
+}
+/* --------------howto----------- */
+#howtolist{
+    padding:30px 10px; 
+}
+#howtolist .step-to-list{
+    padding: 5px 10px;
+    
+}
+#howtolist .step-to-list h3{
+    font-family: var(--comforta);
+    font-weight: 700;
+}
+.step-to-list p{
+    font-weight: 500;
+}
+.step-to-list ul li{
+    list-style-type: disc;
+    padding: 10px 5px;
+
+}
+.step-to-list ul li p{
+    margin: 0;
+}
+#howtolist .row{
+    padding: 20px 10px;
+}
+
+#howtolist .col-md-6 img{
+    height: 85%;
+}

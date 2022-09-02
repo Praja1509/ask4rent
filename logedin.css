@@ -1,0 +1,138 @@
+/* -----------------head side content---------- */
+#user-img-box{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+
+}
+#user-img-box img{
+    width: 50px;
+    margin-left: -3.5px;
+}
+.links ul{
+    margin-top: 5px;
+}
+.links .bi-bell-fill{
+    font-size: 23px;
+    margin: 0 5px;
+}
+.links .bi-bell-fill::after{
+    content:attr(count);
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    padding:2px 5px;
+    font-style: normal;
+    background-color: var(--primary);
+    font-size:8px;
+    color: white;
+    margin-left: 10px;
+    margin-top: -36px;
+    border: 1px solid white;
+    font-weight: 600;
+}
+#menu i{
+    position: relative;
+    top: 3px;
+    font-size:26px !important;
+}
+/* -------profile-links---------------- */
+#profile-links{
+    position: absolute;
+    right:3%;
+    top:100%;
+    z-index: 6;
+    width: 200px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+#profile-links ul{
+    padding:5px 0;
+    margin: 0;
+}
+#profile-links li{
+    margin: 0;
+    padding:8px 12px;
+    border-bottom: 1px solid whitesmoke;
+}
+#profile-links li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+/* --------------notification------------ */
+#notification{
+    position: absolute;
+    top: 100%;
+    right: 5%;
+    z-index: 7;
+    width: 300px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.3);
+    display: none;
+    
+}
+#notification ul{
+    padding:8px 0;
+    margin: 0;
+    height: 400px;
+    overflow: auto;
+}
+#notification ul::-webkit-scrollbar{
+    width:.3rem;
+    background-color:gainsboro;
+ }
+ #notification ul::-webkit-scrollbar-thumb{
+    width:.3rem;
+    background-color:gray;
+    height: 2px;
+ }
+#notification li{
+    margin: 0;
+    padding:2px 12px;
+    border-bottom: 1px solid whitesmoke;
+}
+#notification li p a{
+    color:var(--links);
+    font-size: 14px;
+}
+#notification li p a:hover{
+    text-decoration: underline;
+}
+/* ----------sidenav--------- */
+.sidenav{
+    padding-top: 50px;
+}
+.profile{
+    background-color: whitesmoke;
+    padding:15px 10px;
+   
+}
+.profile h4{
+    display: inline-block;
+    font-weight: 600;
+    font-family: var(--comforta);
+    padding-top: 8px;
+    padding-left: 2px;
+}
+.profile p{
+    display: inline-block;
+    padding-left: 5px;
+    padding-top: 0;
+}
+.profile p a:hover{
+    color: var(--links) !important;
+    text-decoration: underline;
+}
+.profile-box{
+    display: inline-block;
+    width: 80px;
+    float: left;
+    margin: 0 8px;
+}

@@ -131,6 +131,24 @@ function openNav() {
       document.getElementById("dropdown-links").style.display = "block";
     }
   }
+  function show_profile_link() {
+    if (
+      document.getElementById("profile-links").style.display == "block"
+    ) {
+      document.getElementById("profile-links").style.display = "none";
+    } else {
+      document.getElementById("profile-links").style.display = "block";
+    }
+  }
+  function show_notification() {
+    if (
+      document.getElementById("notification").style.display == "block"
+    ) {
+      document.getElementById("notification").style.display = "none";
+    } else {
+      document.getElementById("notification").style.display = "block";
+    }
+  }
   function show_search(){
     document.getElementById("search").style.display = "block"
     document.getElementById("transition").style.display = "block";

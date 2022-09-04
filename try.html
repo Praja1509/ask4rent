@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="propform.css">
+</head>
+<body>
+    <button onclick="add()">add</button>
+    <div class="image-container text-center" id="img-container">
+
+        <!-- <div class="img-box">
+         <div class="close-box " onclick="close_img(event)">
+           <span class="close-img" ">&times;</span>
+         </div>
+         <img src="images/testing.jpg" class="img-fluid" alt="">
+        </div> -->
+      </div>
+      <script>
+        function add(){
+            let img_container=document.getElementById('img-container');
+            let img_box=document.createElement('div');
+            let close_box=document.createElement('div');
+            let span=document.createElement('span');
+            let image=document.createElement('img');
+            
+            span.textContent='x'
+            span.setAttribute('class','close-img');
+            close_box.setAttribute('class','close-box')
+            close_box.setAttribute('onclick','close_img(event)')
+            image.setAttribute('class','img-fluid')
+            image.setAttribute('src','images/testing.jpg')
+            img_box.setAttribute('class','img-box')
+            close_box.append(span);
+            img_box.append(close_box,image)
+            img_container.append(img_box)
+        }
+      </script>
+</body>
+</html>

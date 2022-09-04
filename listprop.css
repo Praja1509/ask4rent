@@ -21,18 +21,19 @@ header .container{
     font-family: var(--comforta);
     font-weight: 550;
     font-size: 15px;
+    padding-bottom: 10px;
 }
-#banner .container button{
+#banner .container a{
     background-color: white;
     color: black;
     border: 0;
     border-radius: 5px;
     padding: 8px 15px;
-    margin: 5px 0;
+    margin: 5px 0 ;
     text-transform: uppercase;
     font-weight: 500;
 }
-#banner .container button:hover{
+#banner .container a:hover{
     background-color: black;
     color: var(--primary);
 }

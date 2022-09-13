@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dashboard | Ask for rent</title>
+    <link rel="icon" href="images/iconmonstr-party-19-240.png" />
+    <!-- -----bootstrap css------ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- ----------bootstrap js------------- -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ----------bootstrap icon-------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- ----------customcss-------------->
+    <link rel="stylesheet" href="style.css" />
+    <!-- ----------userlogedincss-------------- -->
+    <link rel="stylesheet" href="logedin.css" />
+    <!-- ----------------dashboard css----------------- -->
+    <link rel="stylesheet" href="dashboard.css" />
+
+  </head>
+  <body>
+    <!-- ----------header-------------- -->
+    <header>
+      <!-- As a heading -->
+      <nav class="navbar">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">
+            <a href="userlogedin.html" class="logo">AskforRent</a>
+          </span>
+          <div class="links">
+            <!-- <ul class="d-none d-md-flex"> -->
+            <ul class="">
+              <li class="d-none d-md-flex"><a href="listprop.html" class="list-prop">List your property</a></li>
+             <i class="bi bi-bell-fill" count="1" onclick="show_notification()"></i>
+            </ul>
+            <!-- <span id="user-img-box" onclick="show_profile_link()" class="d-none d-md-flex"> -->
+            <span id="user-img-box" onclick="show_profile_link()">
+                <img src="images/profile-circle.png"  alt="">
+             </span>
+            <span id="menu" onclick="openNav()"
+              ><i class="bi bi-list"></i
+              ><dfn class="d-none d-md-inline-flex"></dfn></span
+            >
+          </div>
+          <div id="profile-links">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">View Porfile</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Logut</a></li>
+                </ul>
+          </div>
+          <div id="notification">
+            <ul>
+                <li>
+                    <p>Complete your profile. <br>
+                        <a href="#">click here to complete profile</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam aliquam fugiat consequatur iusto quae nostrum quisquam ratione quos possimus!
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <!-- --------------sidebar -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="slider-logo">
+            <h2><span>A</span>sk for Rent</h2>
+          </div>
+          <div class="profile">
+            <span class="profile-box">
+                <img src="images/testing.jpg" class="img-fluid" alt="">
+            </span>
+           <div class="profile-name">
+            <h5>Jon Doe</h5>
+            <p><a href="#">view profile</a></p>
+           </div>
+          </div>
+          <a href="userlogedin.html" class="slider-links">Home</a>
+          <a href="#localities" onclick="closeNav()"  class="slider-links">Explore</a>
+          <a href="#" class="slider-links">About Us</a>
+          <a href="contact.html" class="slider-links">Contact Us</a>
+          <a href="enquire.html" class="slider-links">Enquire Now</a>
+          <a href="#" class="slider-links">FAQs</a>
+          <a href="#" class="slider-links">Terms & Condition</a>
+          <a href="#" class="slider-links">Privacy Policy</a>
+          <hr />
+          <a href="login.html" class="slider-links sl-btn" id="sl-btn">Logout</a>
+        </div>
+        <div id="transition"></div>
+      </nav>
+    </header>
+    <!-- ----------------dashboard----------------- -->
+   <main>
+    <div class="container">
+       <div class="row">
+            <div class="col-md-2 d-none d-md-block">
+                <div id="profile-sidenav">
+                   <div class="profile-sidenav-box">
+                    <img src="images/testing.jpg" class="img-fluid" alt="">
+                    <h5>Jon Doe</h5>
+                    <hr>
+                   </div>
+                   <ul class="profile-side-links">
+                    <li class="active"><a href="#">Dasboard</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Bank Details</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div class="col-md-9 mx-4">
+                <h4>Dashboard</h4>
+                <div class="button-menu">
+                    <div class="menu-button">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button id="owner-btn" class="button-active" onclick="ownerpage()">As owner</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button id="seeker-btn" onclick="seekerpage()">As seeker</button>
+                            </div>
+                        </div>
+                        <div id="owner">
+                           <h5>My Properties & resonses</h5>
+                            <div class="row text-center">
+                              <div class="col-md-4">
+                                  <i class="bi bi-house-heart"></i><span class="number">0</span>
+                                  <h5>Properties</h5>
+                                  <div class="owner-details">
+                                    <a class="details">
+                                        <span>Active</span>
+                                        <span class="num-border">0</span>
+                                    </a>
+                                    <a class="details">
+                                        <span>Inactive</span>
+                                        <span class="num-border">0</span>
+                                    </a>
+                                    <a class="details">
+                                        <span>Draft</span>
+                                        <span class="num-border">0</span>
+                                    </a>
+                                    <a href="" class="view-more">view more<i class="bi bi-chevron-double-right"></i></a>
+                                  </div>
+                                
+
+                              </div>
+                              <div class="col-md-4">
+                                <i class="bi bi-envelope-paper"></i><span class="number">0</span>
+                                <h5>Responses</h5>
+                                <a class="details">
+                                  <span>Today</span>
+                                  <span  class="num-border">0</span>
+                              </a>
+                                <a class="details">
+                                  <span>Last 7 days</span>
+                                  <span  class="num-border">0</span>
+                              </a>
+                              <a class="details">
+                                <span>Last 30 days</span>
+                                <span  class="num-border">0</span>
+                            </a>
+                            <a href="" class="view-more">view more<i class="bi bi-chevron-double-right"></i></a>
+
+                              </div>
+                              <div class="col-md-4">
+                                <i class="bi bi-calendar-week"></i><span class="number">0</span>
+                                <h5>Site Visits</h5>
+                                <a class="details">
+                                  <span>Pending</span>
+                                  <span  class="num-border">0</span>
+                              </a>
+                                <a class="details">
+                                  <span>Schedule</span>
+                                  <span  class="num-border">0</span>
+                              </a>
+                              <a class="details">
+                                <span>Cancelled</span>
+                                <span  class="num-border">0</span>
+                            </a>
+                              <a class="details">
+                                <span>Completed</span>
+                                <span  class="num-border">0</span>
+                            </a>
+                            <a href="" class="view-more">view more<i class="bi bi-chevron-double-right"></i></a>
+
+                              </div>
+                            </div>
+                        </div>
+                        <div id="seeker">
+                            <h3>seeker</h3>
+                            <p>this seeker <section></section></p>
+                        </div>
+                    </div>
+                </div>
+                <p id="looking">Looking to Post a property? <a href="">Click here <i class="bi bi-chevron-double-right"></i></a></p>
+            </div>
+       </div> 
+    </div>
+   </main>
+  
+  </body>
+  <script>
+      let owner=document.getElementById('owner');
+        let ownerbtn=document.getElementById('owner-btn');
+        let seekerbtn=document.getElementById('seeker-btn');
+        let seeker=document.getElementById('seeker');
+       function ownerpage(){
+        if(seekerbtn.hasAttribute('class')){
+            seekerbtn.removeAttribute('class')
+            ownerbtn.setAttribute('class','button-active')
+            owner.style.display='block';
+            if(seeker.style.display=='block'){
+            seeker.style.display='none';
+            owner.style.display='block';
+        }
+        }
+       }
+       function seekerpage(){
+        owner.style.display='none'
+        seeker.style.display='block'
+        if(ownerbtn.hasAttribute('class')){
+            ownerbtn.removeAttribute('class')
+            seekerbtn.setAttribute('class','button-active');
+            let seeker=document.getElementById('seeker');
+        if(owner.style.display=='block'){
+            owner.style.display='none';
+            seeker.style.display='block';
+        }
+        }
+       }
+  </script>
+  <!-- ------------mainjs -->
+  <script src="allindex.js" defer></script>
+  <!-- ---------------scrollanimation -->
+  <script src="scrollreveal.min.js"></script>
+  <!-- --------------swiper js -->
+  <script src="swiper-bundle.min.js"></script>
+</html>

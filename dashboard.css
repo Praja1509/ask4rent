@@ -1,10 +1,10 @@
+body{
+    overflow-x: hidden;
+}
 main{
-    display: flex;
-    height: 100vh;
-    padding: 20px 10px;
-    /* align-items: center; */
-    justify-content: center;
-    margin-top: 100px;
+    margin-top: 150px;
+    position: relative;
+    left:2.5%;
 }
 .container .col-md-2{
     box-shadow: 0 2px 8px 1px rgba(0, 0, 0, 0.15);
@@ -56,8 +56,9 @@ main{
     background-color: ghostwhite;
    
 }
+
 .menu-button{
-    margin: 8px 20px;
+    margin: 8px 16px;
 }
 .menu-button .col-md-6{
     padding: 0;
@@ -78,8 +79,14 @@ main{
 } */
 @media screen and (max-width:767px) {
     .container .col-md-9{
-        margin: 0 !important    ;
+        margin:0px  !important;
+       
     }
+    main{
+        left: 0% ;
+        margin:100px 20px;
+    }
+  
 }
 #seeker{
     display: none;
@@ -90,6 +97,7 @@ main{
     border-bottom: 3.5px solid var(--primary) !important;
 
 }
+/* ----------------owner------------ */
 #owner{
     padding: 20px;
    
@@ -138,15 +146,32 @@ main{
     color: black !important;
 }
 #looking{
-    margin-left:2%;
+    margin-top:2.5%;
+    margin-left: -10px;
+    font-size: 14px;
+    font-weight: 500;
 }
 #looking i{
     font-size: 10px;
+    color: white;
 }
 #looking a{
     background-color:var(--primary);
     padding: 5px;
     color: white;
-    font-size: 16px;
+    font-size:12px;
+    font-weight: 500;
     border-radius: 5px;
+}
+/* ---------------seeeker------- */
+#seeker{
+    padding: 20px;
+
+}
+#seeker .container .row{
+    margin: 30px;
+}
+#seeker .row .col-md-4{
+    border: 1px solid whitesmoke;
+    padding: 10px;
 }

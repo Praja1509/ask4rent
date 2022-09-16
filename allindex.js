@@ -121,6 +121,7 @@ function openNav() {
     document.getElementById("transition").style.display = "none";
     document.getElementById("dropdown-links").style.display = "none";
     document.getElementById("search").style.display = "none";
+    document.getElementById("prop-modal").style.display = "none";
   }
   function showlink() {
     if (
@@ -147,6 +148,15 @@ function openNav() {
       document.getElementById("notification").style.display = "none";
     } else {
       document.getElementById("notification").style.display = "block";
+    }
+  }
+  function show_prop() {
+    if (
+      document.getElementById("prop-modal").style.display == "block"
+    ) {
+      document.getElementById("prop-modal").style.display = "none";
+    } else {
+      document.getElementById("prop-modal").style.display = "block";
     }
   }
   function show_search(){

@@ -693,6 +693,33 @@ footer .social-links a:hover{
     }
    
 }
+/* -----------------last addded------------ */
+#prop-modal{
+    position: fixed;
+    top:10%;
+    left:35vw;
+    z-index:10;
+}
+#prop-modal span{
+    padding:25px 15px;
+    font-weight: 400;
+    border-radius:5px;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0px 8px 1px rgba(34, 171, 94, 0.3);
+    background-color: white;
+    font-size:18px;
+}
+#prop-modal span a{
+    margin: 0 5px;
+    text-decoration: underline;
+}
+#prop-modal .closebtn{
+    text-decoration: none;
+    font-size:35px;
+    position: relative;
+    top: 5px;
+}
+
 @media screen and (min-width:767px) and (max-width:991px){
     .s-btn{
         position: relative;

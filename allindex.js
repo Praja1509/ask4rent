@@ -164,3 +164,7 @@ function openNav() {
     document.getElementById("transition").style.display = "block";
 
   }
+  function scrollToTop(){
+    document.body.scrollTop=0;
+    
+  }

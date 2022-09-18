@@ -1,0 +1,102 @@
+#filter{
+    position:fixed;
+    left: 0;
+    height: 100%;
+    box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.15);
+
+}
+.sortby span{
+    cursor: pointer;
+    /* color: red; */
+    font-weight: 500;
+}
+#short-list{
+    display: none;
+    margin-top:5px;
+    border:.2px solid lightgray;
+    padding: 8px 0px ;
+    border-radius: 5px;
+    position: fixed;
+    margin-left: -50px;
+    background-color: white;
+}
+#short-list li{
+    padding: 8px 5px;
+    cursor: pointer;
+    font-weight: normal;
+}
+#short-list li:hover{
+    background-color: whitesmoke;
+}
+#prop-search #basic-addon2{
+    background-color:var(--primary);
+    color: white;
+    font-weight: 600;
+    border: 0;
+}
+
+#filter-prop h6{
+    color: #A1A1A1;
+    padding:10px 0;
+}
+#filter-prop ul{
+    /* display: inline-block; */
+    padding: 0;
+}
+#filter-prop li{
+    margin:2px 3px;
+    padding: 5px 15px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid gainsboro;
+}
+#filter-prop li:hover{
+    background-color: var(--primary);
+    color: white;
+    border: 0;
+}
+#filter-prop .btn-warning{
+    background-color: var(--primary) !important;
+    color: white;
+}
+.house-box{
+    border-radius: 5px;
+    box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.15);
+    padding:15px 10px;
+    
+}
+.house-box li{
+    margin: 5px ;
+    padding: 5px 8px;
+    border-left: 1px solid lightgray;
+    font-size: 15px;
+}
+.house-box .btn-warning{
+    background-color: var(--primary);
+    color: white;
+}
+.price-box{
+    position: relative;
+    top: 80px;
+    /* text-align: center; */
+}
+.price-box h1{
+    color: var(--primary);
+    font-size: 45px;
+}
+.verify{
+    background-color: var(--primary);
+    color: white;
+    font-weight: 500;
+    padding: 5px 15px;
+    position: relative;
+    box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.15);
+    right: -30px;
+}
+@media screen and (max-width:767px){
+    .price-box{
+        top: 0;
+    }
+}

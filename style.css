@@ -671,6 +671,11 @@ footer .social-links a:hover{
     .swiper-button-prev::after{
         display: none;
     }
+    #prop-modal{
+       width: 300px;
+       font-size: 16px;
+      
+    }
 }
 @media screen and (max-width:350px) {
     .search input[type=search]{
@@ -692,15 +697,22 @@ footer .social-links a:hover{
     body{
         overflow-x: hidden;
     }
+    #prop-modal{
+        width: 220px;
+    }
    
 }
 /* -----------------last addded------------ */
 #prop-modal{
     position: fixed;
-    top:10%;
-    left:35vw;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
     z-index:10;
     display: none;
+    min-width:500px;
+    max-width:700px;
+    
 }
 #prop-modal span{
     padding:20px 15px;

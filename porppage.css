@@ -17,6 +17,7 @@
     padding: 8px 0px ;
     border-radius: 5px;
     position: fixed;
+    z-index: 3;
     margin-left: -50px;
     background-color: white;
 }
@@ -71,7 +72,7 @@
     margin: 5px ;
     padding: 5px 8px;
     border-left: 1px solid lightgray;
-    font-size: 15px;
+    font-size: 14px;
 }
 .house-box .btn-warning{
     background-color: var(--primary);
@@ -82,9 +83,9 @@
     top: 80px;
     /* text-align: center; */
 }
-.price-box h1{
+.price-box h2{
     color: var(--primary);
-    font-size: 45px;
+    font-size: 36px;
 }
 .verify{
     background-color: var(--primary);
@@ -93,7 +94,7 @@
     padding: 5px 15px;
     position: relative;
     box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.15);
-    right: -30px;
+    right: -25px;
 }
 @media screen and (max-width:767px){
     .price-box{

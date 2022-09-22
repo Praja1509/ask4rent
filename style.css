@@ -744,7 +744,7 @@ footer .social-links a:hover{
         left: -15px;
     }
     #prop-modal{
-        font-size: 10px;
+        font-size:8px;
          position:absolute;
     left:0%;
     transform: translate(0%, 0%);

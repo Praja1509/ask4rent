@@ -704,14 +704,16 @@ footer .social-links a:hover{
 }
 /* -----------------last addded------------ */
 #prop-modal{
-    position: fixed;
-    left: 50%;
-    top: 15%;
+    position:absolute;
+    left:50%;
+    top:150px;
+    /* margin-left:auto; */
     transform: translate(-50%, -50%);
     z-index:10;
     display: none;
     min-width:500px;
     max-width:700px;
+    
     
 }
 #prop-modal span{
@@ -740,6 +742,13 @@ footer .social-links a:hover{
         float: right;
         top: -45px;
         left: -15px;
+    }
+    #prop-modal{
+        font-size: 10px;
+         position:absolute;
+    left:0%;
+    transform: translate(0%, 0%);
+
     }
 }
 

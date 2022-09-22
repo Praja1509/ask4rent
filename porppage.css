@@ -1,10 +1,22 @@
 #filter{
     position:fixed;
+    top:5%;
     left: 0;
     height: 100%;
     box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.15);
+    overflow-y:auto;
 
 }
+#filter::-webkit-scrollbar{
+    width:5px;
+    background-color:ghostwhite;
+ }
+ #filter::-webkit-scrollbar-thumb{
+    width:5px;
+    background-color:lightgray;
+    height: 1px;
+ }
+
 .sortby span{
     cursor: pointer;
     /* color: red; */
@@ -61,12 +73,17 @@
 #filter-prop .btn-warning{
     background-color: var(--primary) !important;
     color: white;
+    border-color: var(--primary);
+    box-shadow: none;
 }
 .house-box{
     border-radius: 5px;
     box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 0.15);
     padding:15px 10px;
     
+}
+.house-box img{
+    height: 200px;
 }
 .house-box li{
     margin: 5px ;
@@ -75,8 +92,10 @@
     font-size: 14px;
 }
 .house-box .btn-warning{
-    background-color: var(--primary);
+    background-color: var(--primary) !important;
     color: white;
+    border-color: var(--primary);
+    box-shadow: none;
 }
 .price-box{
     position: relative;
@@ -99,5 +118,11 @@
 @media screen and (max-width:767px){
     .price-box{
         top: 0;
+    }
+    .house-box li{
+        font-size: 10px;
+    }
+    .verify{
+        top: -420px;
     }
 }

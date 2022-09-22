@@ -635,6 +635,40 @@ footer .social-links a:hover{
     background-color: rgba(0, 0, 0, 0.2);
     font-size:15px;
 }
+/* -----------------last addded------------ */
+#prop-modal{
+    position:absolute;
+    left:50%;
+    top:150px;
+    transform: translate(-50%, -50%);
+    z-index:10;
+    display: none;
+    min-width:500px;
+    max-width:700px;
+    
+    
+}
+#prop-modal span{
+    padding:20px 15px;
+    font-weight: 400;
+    border-radius:5px;
+    border: 1px solid gainsboro;
+    box-shadow: 0 0px 8px 1px rgba(230, 159, 46, 0.416);
+    background-color: white;
+    font-size:18px;
+}
+#prop-modal span a{
+    margin: 0 5px;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 400;
+}
+#prop-modal .closebtn{
+    text-decoration: none;
+    font-size:35px;
+    position: relative;
+    top: 5px;
+}
 /* -------------------responsive------------ */
 @media screen and (max-width:550px) {
     .search input[type=search]{
@@ -671,10 +705,15 @@ footer .social-links a:hover{
     .swiper-button-prev::after{
         display: none;
     }
-    #prop-modal{
-       width: 300px;
-       font-size: 16px;
-      
+    #prop-modal span{
+        font-size:16px;
+        position:absolute;
+        left:5%;
+        transform: translate(0%, 0%);
+        padding:10px;
+    }
+    #prop-modal .closebtn{
+        font-size: 25px;
     }
 }
 @media screen and (max-width:350px) {
@@ -697,44 +736,10 @@ footer .social-links a:hover{
     body{
         overflow-x: hidden;
     }
-    #prop-modal{
-        width: 220px;
-    }
+  
    
 }
-/* -----------------last addded------------ */
-#prop-modal{
-    position:absolute;
-    left:50%;
-    top:150px;
-    /* margin-left:auto; */
-    transform: translate(-50%, -50%);
-    z-index:10;
-    display: none;
-    min-width:500px;
-    max-width:700px;
-    
-    
-}
-#prop-modal span{
-    padding:20px 15px;
-    font-weight: 400;
-    border-radius:5px;
-    border: 1px solid gainsboro;
-    box-shadow: 0 0px 8px 1px rgba(230, 159, 46, 0.416);
-    background-color: white;
-    font-size:18px;
-}
-#prop-modal span a{
-    margin: 0 5px;
-    text-decoration: underline;
-}
-#prop-modal .closebtn{
-    text-decoration: none;
-    font-size:35px;
-    position: relative;
-    top: 5px;
-}
+
 
 @media screen and (min-width:767px) and (max-width:991px){
     .s-btn{
@@ -743,13 +748,7 @@ footer .social-links a:hover{
         top: -45px;
         left: -15px;
     }
-    #prop-modal{
-        font-size:8px;
-         position:absolute;
-    left:0%;
-    transform: translate(0%, 0%);
-
-    }
+ 
 }
 
 

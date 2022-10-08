@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Info | Ask for rent</title>
+    <link rel="icon" href="images/iconmonstr-party-19-240.png" />
+    <!-- -----bootstrap css------ -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- ----------bootstrap js------------- -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ----------bootstrap icon-------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- ----------customcss-------------->
+    <link rel="stylesheet" href="style.css" />
+    <!-- ----------userlogedincss-------------- -->
+    <link rel="stylesheet" href="logedin.css" />
+    <!-- ----------------dashboard css----------------- -->
+    <link rel="stylesheet" href="dashboard.css" />
+    <!-- ----------------profile css----------------- -->
+    <link rel="stylesheet" href="profile_page.css" />
+
+  </head>
+  <body>
+    <!-- ----------header-------------- -->
+    <header>
+      <!-- As a heading -->
+      <nav class="navbar">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">
+            <a href="userlogedin.html" class="logo">AskforRent</a>
+          </span>
+          <div class="links">
+            <!-- <ul class="d-none d-md-flex"> -->
+            <ul class="">
+              <li class="d-none d-md-flex"><a href="listprop.html" class="list-prop">List your property</a></li>
+             <i class="bi bi-bell-fill" count="1" onclick="show_notification()"></i>
+            </ul>
+            <!-- <span id="user-img-box" onclick="show_profile_link()" class="d-none d-md-flex"> -->
+            <span id="user-img-box" onclick="show_profile_link()">
+                <img src="images/user-img.png" class="change_img "  alt="">
+             </span>
+            <span id="menu" onclick="openNav()"
+              ><i class="bi bi-list"></i
+              ><dfn class="d-none d-md-inline-flex"></dfn></span
+            >
+          </div>
+          <div id="profile-links">
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">View Porfile</a></li>
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Logut</a></li>
+                </ul>
+          </div>
+          <div id="notification">
+            <ul>
+                <li>
+                    <p>Complete your profile. <br>
+                        <a href="#">click here to complete profile</a>
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime aperiam aliquam fugiat consequatur iusto quae nostrum quisquam ratione quos possimus!
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+                <li>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, at?
+                    </p>
+                </li>
+            </ul>
+          </div>
+        </div>
+        <!-- --------------sidebar -->
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <div class="slider-logo">
+            <h2><span>A</span>sk for Rent</h2>
+          </div>
+          <div class="profile">
+            <span class="profile-box">
+                <img src="images/testing.jpg" class="img-fluid" alt="">
+            </span>
+           <div class="profile-name">
+            <h5>Jon Doe</h5>
+            <p><a href="#">view profile</a></p>
+           </div>
+          </div>
+          <a href="userlogedin.html" class="slider-links">Home</a>
+          <a href="#localities" onclick="closeNav()"  class="slider-links">Explore</a>
+          <a href="#" class="slider-links">About Us</a>
+          <a href="contact.html" class="slider-links">Contact Us</a>
+          <a href="enquire.html" class="slider-links">Enquire Now</a>
+          <a href="#" class="slider-links">FAQs</a>
+          <a href="#" class="slider-links">Terms & Condition</a>
+          <a href="#" class="slider-links">Privacy Policy</a>
+          <hr />
+          <a href="login.html" class="slider-links sl-btn" id="sl-btn">Logout</a>
+        </div>
+        <div id="transition"></div>
+      </nav>
+    </header>
+    <!-- ----------------dashboard----------------- -->
+   <main>
+    <div class="container pb-5">
+       <div class="row">
+            <div class="col-md-2 d-none d-md-block">
+                <div id="profile-sidenav">
+                   <div class="profile-sidenav-box">
+                    <img src="images/user-img.png" class="img-fluid change_img" alt="">
+                    <h5>Jon Doe</h5>
+                    <hr>
+                   </div>
+                   <ul class="profile-side-links">
+                    <li><a href="dashboard.html">Dasboard</a></li>
+                    <li class="active"><a href="profile_page.html">Profile</a></li>
+                    <!-- <li><a href="#">Bank Details</a></li> -->
+                    <li><a href="#">Account Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                   </ul>
+                </div>
+            </div>
+            <div class="col-md-9 mx-4">
+                <h4>My Profile</h4>
+                <div class="container" id="profile">
+                    <div class="row">
+                        <div class="col-md-3 px-0 text-center">
+                            <div class="img-box">
+                                <input type="file" accept="image/* " id="imgInput" onchange="change_Img()">
+                                <img src="images/user-img.png" class="w-100 h-100 change_img"   alt="">
+                               <span class="close" onclick="removeImg()"><i class="bi bi-x"></i></span>
+                            </div>
+                            <br>
+                            <button id="img-btn">Select Photo</button>
+                        </div>
+                        <div class="col-md-9">
+                            <h1 id="profile-name">Jone Doe</h1>
+                        </div>
+                    </div>
+                   <!-- <form action="  ">
+                    <div>
+                        <h5 class="d-inline-block">Gender</h5>
+                        <label for=""><input type="radio" checked>Male</label>
+                        <label for=""><input type="radio">Female</label>
+                    </div>
+                    <div>
+                        <h5 class="d-inline-block">Date of Birth</h5>
+                        <input type="date">
+                    </div>
+                    <div>
+                        <h5 >Alternative Contact Details</h5>
+                        <label for="">Email: <input type="email"></label><br>
+                        <label for="">Phone Number: <input type="number"></label>
+                    </div>
+                    <div>
+                        <h5 >Address</h5>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <input type="submit" class="float-end" value="save">
+                   </form> -->
+
+                </div>
+            </div>
+            
+       </div> 
+    </div>
+   </main>
+  
+  </body>
+  <script>
+        let img_btn=document.getElementById('img-btn');
+        let img_inp=document.getElementById('imgInput');
+        function change_Img(){
+            let img=document.querySelectorAll('.change_img');
+            const url=URL.createObjectURL(img_inp.files[0]);
+            for(let i=0;i<img.length;i++){
+                img[i].src=url;
+            }
+
+        }
+        function removeImg(){
+            let img=document.querySelectorAll('.change_img');
+            for(let i=0;i<img.length;i++){
+                img[i].src='images/user-img.png';
+            }
+        }
+        img_btn.addEventListener('click',()=>{
+            img_inp.click();
+            // change_Img()
+        })
+  </script>
+  <!-- ------------mainjs -->
+  <script src="allindex.js" defer></script>
+  <!-- ---------------scrollanimation -->
+  <script src="scrollreveal.min.js"></script>
+  <!-- --------------swiper js -->
+  <script src="swiper-bundle.min.js"></script>
+</html>

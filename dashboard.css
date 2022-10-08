@@ -175,3 +175,28 @@ main{
     border: 1px solid whitesmoke;
     padding: 10px;
 }
+#seeker i{
+    font-size: 30px;
+    background: linear-gradient(90deg,var(--primary),orange);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+#seeker .col-md-4 p i{
+    font-size: 12px;
+}
+#seeker .box{
+    padding: 50px 10px;
+    background-color: ghostwhite;
+    text-align: center;
+}
+#seeker .box button{
+    all: unset;
+    margin: 10px auto;
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 1px;
+    cursor: pointer;
+    font-weight: 600;
+
+}

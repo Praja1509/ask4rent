@@ -212,6 +212,62 @@
         </div>
         <div id="transition"></div>
       </nav>
+
+      <!-- ------------------search -->
+      <!-- <div  id="search">
+        <div class="container">
+         <span> <a
+          href="javascript:void(0)"
+          id="close"
+          class="closebtn"
+          onclick="closeNav()"
+          >&times;</a
+        ></span>
+        <h5>Where in <div class="dropdown d-inline border p-2 m-1">
+          <a  href="#" role="button" data-bs-toggle="dropdown" id="search-2">
+            Gwalior
+          </a> <i class="bi bi-chevron-down"></i>
+        
+          <ul class="dropdown-menu">
+            <li onclick="changecity(event)"><a href="#" >Gwalior </a></li>
+            <li onclick="changecity(event)"><a href="#" >Benglore</a></li>
+            <li onclick="changecity(event)"><a href="#" >Gurgaon</a></li>
+            <li onclick="changecity(event)">
+              <a href="#" >Hyderabaad</a>
+            </li>
+            <li onclick="changecity(event)"><a href="#" >Delhi</a></li>
+            <li onclick="changecity(event)"><a href="#" >Indore</a></li>
+            <li onclick="changecity(event)"><a href="#" >Jaipur</a></li>
+            <li onclick="changecity(event)"><a href="#" >Greater Noida</a></li>
+            <li onclick="changecity(event)"><a href="#" >Chennai</a></li>
+            <li onclick="changecity(event)"><a href="#" >Kota</a></li>
+            <li onclick="changecity(event)"><a href="#" >Ahemdabaad</a></li>
+            <li onclick="changecity(event)"><a href="#" >Gwalior </a></li>
+            <li onclick="changecity(event)"><a href="#" >Benglore</a></li>
+            <li onclick="changecity(event)"><a href="#" >Gurgaon</a></li>
+            <li onclick="changecity(event)">
+              <a href="#" >Hyderabaad</a>
+            </li>
+          </ul>
+        </div>
+        do you want to live ?
+        </h5>
+        <input type="search" placeholder="Enter location" class="d-block" autofocus>
+        <h6>Popular localities</h6>
+        <ul class="search-city">
+            <li><a href="">City center</a></li>
+            <li><a href="">Laskar</a></li>
+            <li><a href="">Morar</a></li>
+            <li><a href="">Thatipur</a></li>
+            <li><a href="">D.D Nagar</a></li>
+            <li><a href="">Kilagate</a></li>
+            <li><a href="">Hajira</a></li>
+            <li><a href="">Alkapuri</a></li>
+            <li><a href="">Govindpuri</a></li>
+        </ul>
+        </div>
+    </div>
+       -->
     </header>
     <main>
       <div class="container-fluid pt-5">
@@ -269,6 +325,7 @@
                         type="text"
                         class="form-control"
                         placeholder="Enter location or city"
+                         onclick="show_search()"
                       />
                       <span class="input-group-text" id="basic-addon2"
                         >Search</span

@@ -93,6 +93,7 @@ function change_city_data(current_city){
     city_name[i].textContent=city_data[position][i].city_name;
     search_city[i].textContent=city_data[position][i].city_name;
 
+
   }
 
     
